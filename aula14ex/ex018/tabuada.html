@@ -9,14 +9,21 @@
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
         <div>
-            Testando
+            <p>
+                <label for="numbertxt">Digite aqui um número: </label>
+                <input type="number" name="numero" id="numbertxt">
+            </p>
+            <p>
+                <input type="button" value="Calcular" onclick="calcular()">
+            </p>
         </div>
         <div>
-
+            <h2>Tabuada:</h2>
+            <select name="tabuada" id="seltab" size="10"></select>
         </div>
     </section>
     <footer>
