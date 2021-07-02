@@ -14,8 +14,21 @@ function contar(){
         var end = Number(txtf.value)
         var next = Number(txtp.value)
 
-        for(let c = starter; c <= end; c += next){
-            res.innerHTML += `${c} \u{2714}`
+        if (next <= 0) {
+            alert('Passo Inválido! Considerando passo um.')
+            next = 1
+        }
+
+        if (starter < end){
+            //Contagem crescente
+            for(let c = starter; c <= end; c += next){
+                res.innerHTML += `${c} \u{2714}`
+            }
+        } else if (starter > end){
+            //Contagem regresiva
+            for(let c = starter; c >= end; c -= next){
+                res.innerHTML += `${c} \u{2714}`
+            }
         }
 
         res.innerHTML += `\u{1f3c1}`
